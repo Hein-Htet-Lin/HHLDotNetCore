@@ -17,3 +17,16 @@
 /media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/obj/Debug/net10.0/HHLDotNetCore.ConsoleApp.pdb
 /media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/obj/Debug/net10.0/HHLDotNetCore.ConsoleApp.genruntimeconfig.cache
 /media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/obj/Debug/net10.0/ref/HHLDotNetCore.ConsoleApp.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Dapper.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/obj/Debug/net10.0/HHLDotNetCore.ConsoleApp.sourcelink.json
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Relational.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.Extensions.Caching.Abstractions.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.Extensions.Caching.Memory.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.Extensions.Logging.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.Extensions.Options.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Microsoft.Extensions.Primitives.dll
+/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.ConsoleApp/bin/Debug/net10.0/Pomelo.EntityFrameworkCore.MySql.dll
