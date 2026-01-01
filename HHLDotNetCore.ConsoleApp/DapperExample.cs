@@ -19,29 +19,29 @@ namespace HHLDotNetCore.ConsoleApp
         {
             using IDbConnection db = new MySqlConnection(_connectionString);
 
-            string query = "SELECT * FROM Tbl_Blog WHERE deleleFlag = 0";
-            var lst = db.Query<BlogDataModels>(query).ToList();
+            string query = "SELECT * FROM Tbl_Blog WHERE DeleteFlag = 0";
+            var lst = db.Query<BlogDapperDataModels>(query).ToList();
 
             foreach (var item in lst)
             {
-                Console.WriteLine(item.blogId);
-                Console.WriteLine(item.blogTitle);
-                Console.WriteLine(item.blogAuthor);
-                Console.WriteLine(item.blogContent);
+                Console.WriteLine(item.BlogId);
+                Console.WriteLine(item.BlogTitle);
+                Console.WriteLine(item.BlogAuthor);
+                Console.WriteLine(item.BlogContent);
             }
 
         }
 
 
-        public void Create(string title,string author,string content)
+        public void Create(string title, string author, string content)
         {
             using IDbConnection db = new MySqlConnection(_connectionString);
-            string query = "INSERT INTO Tbl_Blog (blogTitle,blogAuthor,blogContent,DeleleFlag) VALUES (@blogTitle,@blogAuthor,@blogContent,0)";
-            int result = db.Execute(query, new BlogDataModels
+            string query = "INSERT INTO Tbl_Blog (BlogTitle,BlogAuthor,BlogContent,DeleteFlag) VALUES (@BlogTitle,@BlogAuthor,@BlogContent,0)";
+            int result = db.Execute(query, new BlogDapperDataModels
             {
-               blogTitle = title,
-               blogAuthor = author,
-               blogContent = content
+                BlogTitle = title,
+                BlogAuthor = author,
+                BlogContent = content
 
             });
 
@@ -51,23 +51,50 @@ namespace HHLDotNetCore.ConsoleApp
         public void Edit(int id)
         {
             using IDbConnection db = new MySqlConnection(_connectionString);
-            string query = "SELECT * FROM Tbl_Blog WHERE deleleFlag = 0 and blogId = @blogId";
-            var item = db.Query<BlogDataModels>(query,new BlogDataModels
+            string query = "SELECT * FROM Tbl_Blog WHERE DeleteFlag = 0 and BlogId = @BlogId";
+            var item = db.Query<BlogDataModels>(query, new BlogDapperDataModels
             {
-                blogId = id
+                BlogId = id
             }).FirstOrDefault();
 
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No Data Found");
                 return;
             }
-            
-            Console.WriteLine(item.blogId);
-            Console.WriteLine(item.blogTitle);
-            Console.WriteLine(item.blogAuthor);
-            Console.WriteLine(item.blogContent);
 
+            Console.WriteLine(item.BlogId);
+            Console.WriteLine(item.BlogTitle);
+            Console.WriteLine(item.BlogAuthor);
+            Console.WriteLine(item.BlogContent);
+
+        }
+
+        public void Update(int id, string author, string title, string content)
+        {
+            using IDbConnection db = new MySqlConnection(_connectionString);
+            string query = "UPDATE Tbl_Blog SET BlogTitle = @BlogTitle ,BlogAuthor = @BlogAuthor ,BlogContent = @BlogContent,DeleteFlag = 0 where BlogId = @BlogId";
+            int result = db.Execute(query, new BlogDapperDataModels
+            {
+                BlogId = id,
+                BlogTitle = title,
+                BlogAuthor = author,
+                BlogContent = content
+            });
+
+            Console.WriteLine(result == 1 ? "Update Successful" : "Update Failed");
+        }
+
+        public void Delete(int id)
+        {
+            using IDbConnection db = new MySqlConnection(_connectionString);
+            string query = "UPDATE Tbl_Blog SET DeleteFlag = 1 WHERE BlogId = @BlogId";
+            int result = db.Execute(query,new BlogDapperDataModels
+            {
+                BlogId = id
+            });
+
+            Console.WriteLine(result == 1 ? "Delete Successful" : "Delete Failed");
         }
     }
 }

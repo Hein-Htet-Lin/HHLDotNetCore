@@ -21,20 +21,20 @@ namespace HHLDotNetCore
             Console.WriteLine("Connetion Opened");
 
 
-            string query = @"SELECT blogId,
-                blogAuthor,
-                blogTitle,
-                blogContent FROM Tbl_Blog WHERE deleleFlag = 0";
+            string query = @"SELECT BlogId,
+                BlogAuthor,
+                BlogTitle,
+                BlogContent FROM Tbl_Blog WHERE DeleteFlag = 0";
 
 
             MySqlCommand cmd = new MySqlCommand(query, connection);
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Console.WriteLine(reader["blogId"]);
-                Console.WriteLine(reader["blogTitle"]);
-                Console.WriteLine(reader["blogAuthor"]);
-                Console.WriteLine(reader["blogContent"]);
+                Console.WriteLine(reader["BlogId"]);
+                Console.WriteLine(reader["BlogTitle"]);
+                Console.WriteLine(reader["BlogAuthor"]);
+                Console.WriteLine(reader["BlogContent"]);
             }
             // MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             // DataTable dt = new DataTable();
@@ -78,23 +78,23 @@ namespace HHLDotNetCore
 
 
             string queryInsert = $@"INSERT INTO Tbl_Blog 
-                    (blogAuthor,
-                    blogTitle,
-                    blogContent,
-                    deleleFlag) 
+                    (BlogAuthor,
+                    BlogTitle,
+                    BlogContent,
+                    DeleteFlag) 
                 VALUES 
-                    (@blogAuthor,
-                    @blogTitle,
-                    @blogContent,
+                    (@BlogAuthor,
+                    @BlogTitle,
+                    @BlogContent,
                     0)";
 
             MySqlCommand cmd2 = new MySqlCommand(queryInsert, connection2);
             // MySqlDataAdapter adapter2 = new MySqlDataAdapter(cmd2);
             // DataTable dt = new DataTable();
             // adapter2.Fill(dt);
-            cmd2.Parameters.AddWithValue("@blogTitle", blogTitle);
-            cmd2.Parameters.AddWithValue("@blogAuthor", blogAuthor);
-            cmd2.Parameters.AddWithValue("@blogContent", blogContent);
+            cmd2.Parameters.AddWithValue("@BlogTitle", blogTitle);
+            cmd2.Parameters.AddWithValue("@BlogAuthor", blogAuthor);
+            cmd2.Parameters.AddWithValue("@BlogContent", blogContent);
 
             int result = cmd2.ExecuteNonQuery();
 
@@ -117,13 +117,13 @@ namespace HHLDotNetCore
             connection.Open();
             string query = @"
                 SELECT blogId,
-                blogAuthor,
-                blogTitle,
-                blogContent 
-                FROM Tbl_Blog WHERE blogId = @blogID
+                BlogAuthor,
+                BlogTitle,
+                BlogContent 
+                FROM Tbl_Blog WHERE BlogId = @BlogID
             ";
             MySqlCommand cmd = new MySqlCommand(query,connection);
-            cmd.Parameters.AddWithValue("@blogId",blogId);
+            cmd.Parameters.AddWithValue("@BlogId",blogId);
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -163,16 +163,16 @@ namespace HHLDotNetCore
             string query = @"
                     UPDATE 
                     Tbl_Blog SET 
-                    blogTitle = @blogTitle ,
-                    blogAuthor = @blogAuthor ,
-                    blogContent = @blogContent,
-                    deleleFlag = 0 where blogId = @blogId
+                    BlogTitle = @BlogTitle ,
+                    BlogAuthor = @BlogAuthor ,
+                    BlogContent = @BlogContent,
+                    DeleteFlag = 0 where BlogId = @BlogId
             ";
             MySqlCommand cmd = new MySqlCommand(query,connection);
-            cmd.Parameters.AddWithValue("blogId",blogId);
-            cmd.Parameters.AddWithValue("blogTitle",blogTitle);
-            cmd.Parameters.AddWithValue("blogAuthor",blogAuthor);
-            cmd.Parameters.AddWithValue("blogContent",blogcontent);
+            cmd.Parameters.AddWithValue("BlogId",blogId);
+            cmd.Parameters.AddWithValue("BlogTitle",blogTitle);
+            cmd.Parameters.AddWithValue("BlogAuthor",blogAuthor);
+            cmd.Parameters.AddWithValue("BlogContent",blogcontent);
 
             int result = cmd.ExecuteNonQuery();
 
@@ -191,12 +191,12 @@ namespace HHLDotNetCore
             string query = @"
                         UPDATE
                         Tbl_Blog
-                        SET deleleFlag = 1 
+                        SET DeleteFlag = 1 
                         WHERE 
-                        blogId = @blogId
+                        BlogId = @BlogId
             ";
             MySqlCommand cmd = new MySqlCommand(query,connection);
-            cmd.Parameters.AddWithValue("blogId",blogId);
+            cmd.Parameters.AddWithValue("BlogId",blogId);
             int result = cmd.ExecuteNonQuery();
             connection.Close();
 

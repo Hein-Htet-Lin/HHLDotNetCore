@@ -9,32 +9,32 @@ namespace HHLDotNetCore.ConsoleApp.Models
 {
     public class BlogDapperDataModels
     {
-        public int blogId{get;set;}
+        public int BlogId{get;set;}
 
-        public string blogTitle{get;set;}
+        public string BlogTitle{get;set;}
 
-        public string blogAuthor{get;set;}
+        public string BlogAuthor{get;set;}
 
-        public string blogContent{get;set;}
+        public string BlogContent{get;set;}
     }
 
     [Table("Tbl_Blog")]
     public class BlogDataModels
     {
         [Key]
-        [Column("blogId")]
-        public int blogId{get;set;}
+        [Column("BlogId")]
+        public int BlogId{get;set;}
 
-        [Column("blogTitle")]
-        public string blogTitle{get;set;}
+        [Column("BlogTitle")]
+        public string BlogTitle{get;set;}
 
-        [Column("blogAuthor")]
-        public string blogAuthor{get;set;}
+        [Column("BlogAuthor")]
+        public string BlogAuthor{get;set;}
 
-        [Column("blogContent")]
-        public string blogContent{get;set;}
+        [Column("BlogContent")]
+        public string BlogContent{get;set;}
 
-        [Column("deleleFlag")]
-        public bool deleleFlag{get;set;}
+        [Column("DeleteFlag")]
+        public bool DeleteFlag{get;set;}
     }
 }
