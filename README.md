@@ -39,3 +39,6 @@ SLH => Collin
 Bank + 5000
 
 SLHDotNetCore
+
+efcore database first
+dotnet ef dbcontext scaffold "Server=localhost;Database=dotNetBatch5;User Id=root;Password=admin;TrustServerCertificate=True;" Pomelo.EntityFrameworkCore.MySql -o Models -c AppDbContext -f
