@@ -40,28 +40,79 @@ namespace HHLDotNetCore.RestApi.Controllers
         {
             var item = _db.TblBlogs.Add(blog);
             _db.SaveChanges();
+            return Ok(blog);
+        }
+
+        [HttpPut("{id}")]
+
+        public IActionResult UpdateBlogs(int id,TblBlog blog)
+        {
+            var item = _db.TblBlogs.Where(x=>x.BlogId == id && x.DeleteFlag == 0).AsNoTracking().FirstOrDefault();
+
+            if(item is null)
+            {
+                return NotFound();
+            }
+
+            item.BlogAuthor=blog.BlogAuthor;
+            item.BlogTitle=blog.BlogTitle;
+            item.BlogContent=blog.BlogContent;
+
+            _db.Entry(item).State = EntityState.Modified;
+            _db.SaveChanges();
+
+            return Ok(blog);
+        }
+
+        [HttpPatch("{id}")]
+
+        public IActionResult PatchBlogs(int id,TblBlog blog)
+        {
+            var item = _db.TblBlogs.Where(x=>x.BlogId == id && x.DeleteFlag == 0).AsNoTracking().FirstOrDefault();
+
+            if(item is null)
+            {
+                return NotFound();
+            }
+            if (!String.IsNullOrEmpty(blog.BlogAuthor))
+            {
+                item.BlogAuthor=blog.BlogAuthor;
+                
+            }
+            if (!String.IsNullOrEmpty(blog.BlogTitle))
+            {
+                item.BlogTitle=blog.BlogTitle;   
+            }
+
+            if (!String.IsNullOrEmpty(blog.BlogContent))
+            {
+                item.BlogContent=blog.BlogContent;
+                
+            }
+            
+
+            _db.Entry(item).State = EntityState.Modified;
+            _db.SaveChanges();
+
+            return Ok(blog);
+        }
+
+        [HttpDelete("{id}")]
+
+        public IActionResult DeleteBlogs(int id)
+        {
+            var item = _db.TblBlogs.Where(x=>x.BlogId == id && x.DeleteFlag == 0).AsNoTracking().FirstOrDefault();
+
+            if(item is null)
+            {
+                return NotFound();
+            }
+            
+            item.DeleteFlag = 1;
+
+            _db.Entry(item).State = EntityState.Modified;
+            _db.SaveChanges();
             return Ok(item);
-        }
-
-        [HttpPut]
-
-        public IActionResult UpdateBlogs()
-        {
-            return Ok();
-        }
-
-        [HttpPatch]
-
-        public IActionResult PatchBlogs()
-        {
-            return Ok();
-        }
-
-        [HttpDelete]
-
-        public IActionResult DeleteBlogs()
-        {
-            return Ok();
         }
     }
 }
