@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="HHLDotNetCore.ConsoleApp/HHLDotNetCore.ConsoleApp.csproj" />
   <Project Path="HHLDotNetCore.Database/HHLDotNetCore.Database.csproj" />
+  <Project Path="HHLDotNetCore.RestApi/HHLDotNetCore.RestApi.csproj" />
 </Solution>

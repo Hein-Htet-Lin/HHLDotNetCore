@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HHLDotNetCore.Database")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53687b85bfa027825cd2ca1f35f3dd1672749e42")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+254dfa9906471c296ebd37da9dde9ca1b82f5247")]
 [assembly: System.Reflection.AssemblyProductAttribute("HHLDotNetCore.Database")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HHLDotNetCore.Database")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
