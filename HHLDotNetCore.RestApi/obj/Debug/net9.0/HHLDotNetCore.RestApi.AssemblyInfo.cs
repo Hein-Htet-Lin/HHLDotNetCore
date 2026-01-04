@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HHLDotNetCore.RestApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+768fd247df4d57d5845c288d6f52bdb3dca6d8e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0df30d7e9a33b6a38fd95b50b771b289b08d6eed")]
 [assembly: System.Reflection.AssemblyProductAttribute("HHLDotNetCore.RestApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HHLDotNetCore.RestApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
