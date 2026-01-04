@@ -30,7 +30,7 @@ Mobile No => Transfer
 Mobile No Check
 10000
 
-SLH => Collin
+HHL => Shwan
 
 10000 => 0
 
@@ -38,7 +38,7 @@ SLH => Collin
 
 Bank + 5000
 
-SLHDotNetCore
+HHLDotNetCore
 
 efcore database first
-dotnet ef dbcontext scaffold "Server=localhost;Database=dotNetBatch5;User Id=root;Password=admin;TrustServerCertificate=True;" Pomelo.EntityFrameworkCore.MySql -o Models -c AppDbContext -f
+dotnet ef dbcontext scaffold "Server=localhost;Database=dotNetBatch5;User Id=root;Password=admin;" Pomelo.EntityFrameworkCore.MySql -o Models -c AppDbContext -f
