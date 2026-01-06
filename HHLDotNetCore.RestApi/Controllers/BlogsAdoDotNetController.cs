@@ -85,8 +85,8 @@ namespace HHLDotNetCore.RestApi.Controllers
 
         public IActionResult CreateBlog([FromBody]BlogsViewModel blog)
         {
-            MySqlConnection connection2 = new MySqlConnection(_connectionString);
-            connection2.Open();
+            MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
             string queryInsert = $@"INSERT INTO Tbl_Blog 
                     (BlogAuthor,
                     BlogTitle,
@@ -98,7 +98,7 @@ namespace HHLDotNetCore.RestApi.Controllers
                     @BlogContent,
                     0)";
 
-            MySqlCommand cmd2 = new MySqlCommand(queryInsert, connection2);
+            MySqlCommand cmd2 = new MySqlCommand(queryInsert, connection);
             // MySqlDataAdapter adapter2 = new MySqlDataAdapter(cmd2);
             // DataTable dt = new DataTable();
             // adapter2.Fill(dt);
@@ -108,24 +108,109 @@ namespace HHLDotNetCore.RestApi.Controllers
 
             int result = cmd2.ExecuteNonQuery();
             String message = result == 1 ? "Create Successful" : "Create Failed" ;
-            connection2.Close();
+            connection.Close();
             return Ok(message);
         }
 
         [HttpPut("{id}")]
 
-        public IActionResult UpdateBlogs(int id)
+        public IActionResult UpdateBlogs(int id,[FromBody]BlogsViewModel blog)
         {
-            return Ok();
+            MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
+            string query = @"
+                    UPDATE 
+                    Tbl_Blog SET 
+                    BlogTitle = @BlogTitle ,
+                    BlogAuthor = @BlogAuthor ,
+                    BlogContent = @BlogContent,
+                    DeleteFlag = 0 where BlogId = @BlogId
+            ";
+            MySqlCommand cmd = new MySqlCommand(query,connection);
+            cmd.Parameters.AddWithValue("BlogId",id);
+            cmd.Parameters.AddWithValue("BlogTitle",blog.Title);
+            cmd.Parameters.AddWithValue("BlogAuthor",blog.Author);
+            cmd.Parameters.AddWithValue("BlogContent",blog.Content);
+
+            int result = cmd.ExecuteNonQuery();
+            connection.Close();
+            String Message = result > 0 ? "Updating Successful" : "Updating Failed";
+            return Ok(Message);
         }
 
         [HttpPatch("{id}")]
 
-        public IActionResult PatchBlogs(int id)
+        public IActionResult PatchBlogs(int id,[FromBody]BlogsViewModel blog)
         {
-            return Ok();
+            String conditions = "";
+            if (!String.IsNullOrEmpty(blog.Title))
+            {
+                conditions += " BlogTitle = @BlogTitle, ";
+            }
+            if (!String.IsNullOrEmpty(blog.Author))
+            {
+                conditions += " BlogAuthor = @BlogAuthor, ";
+            }
+            if (!String.IsNullOrEmpty(blog.Content))
+            {
+                conditions += " BlogContent = @BlogContent, ";
+            }
+            if(conditions.Length == 0)
+            {
+                return BadRequest();
+            }
+
+            // conditions = conditions.Substring(0,conditions.Length - 2);
+
+            MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
+
+            string query = $@"
+                    UPDATE 
+                    Tbl_Blog SET 
+                    {conditions}
+                    DeleteFlag = 0 where BlogId = @BlogId
+            ";
+            MySqlCommand cmd = new MySqlCommand(query,connection);
+            cmd.Parameters.AddWithValue("BlogId",id);
+            
+            if (!String.IsNullOrEmpty(blog.Title))
+            {
+            cmd.Parameters.AddWithValue("BlogTitle",blog.Title);
+            }
+            
+            if (!String.IsNullOrEmpty(blog.Author))
+            {
+            cmd.Parameters.AddWithValue("BlogAuthor",blog.Author);
+            }
+            
+            if (!String.IsNullOrEmpty(blog.Content))
+            {
+            cmd.Parameters.AddWithValue("BlogContent",blog.Content);
+            }
+            
+            
+
+            int result = cmd.ExecuteNonQuery();
+            connection.Close();
+            String Message = result > 0 ? "Updating Successful" : "Updating Failed";
+            return Ok(Message);
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBlogs(int id)
+        {
+            MySqlConnection connection = new MySqlConnection(_connectionString);
+            connection.Open();
+            String query = "UPDATE Tbl_Blog SET DeleteFlag = 1 WHERE BlogId = @BlogId";
+            MySqlCommand cmd = new MySqlCommand(query,connection);
+            cmd.Parameters.AddWithValue("BlogId",id);
+            int result = cmd.ExecuteNonQuery();
+            connection.Close();
+            String Message = result > 0 ? "Delete Successful" : "Delete Failed";
+
+            return Ok(Message);
+        }
         
     }
 }

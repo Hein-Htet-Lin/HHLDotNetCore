@@ -52,7 +52,7 @@ namespace HHLDotNetCore.ConsoleApp
         {
             using IDbConnection db = new MySqlConnection(_connectionString);
             string query = "SELECT * FROM Tbl_Blog WHERE DeleteFlag = 0 and BlogId = @BlogId";
-            var item = db.Query<BlogDataModels>(query, new BlogDapperDataModels
+            var item = db.Query<BlogDapperDataModels>(query, new BlogDapperDataModels
             {
                 BlogId = id
             }).FirstOrDefault();
