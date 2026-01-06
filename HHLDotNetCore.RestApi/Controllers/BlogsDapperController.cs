@@ -98,7 +98,7 @@ namespace HHLDotNetCore.RestApi.Controllers
 
             });
 
-            String Message = result > 1 ? "Update Successful" : "Update Failed";
+            String Message = result > 0 ? "Update Successful" : "Update Failed";
             return Ok(Message);
         }
 
@@ -108,15 +108,15 @@ namespace HHLDotNetCore.RestApi.Controllers
         {
             IDbConnection db = new MySqlConnection(_connectionString);
             String conditions = "";
-            if (String.IsNullOrEmpty(blog.Title))
+            if (!String.IsNullOrEmpty(blog.Title))
             {
                 conditions += " BlogTitle = @BlogTitle, ";
             }
-            if (String.IsNullOrEmpty(blog.Author))
+            if (!String.IsNullOrEmpty(blog.Author))
             {
                 conditions += " BlogAuthor = @BlogAuthor, ";
             }
-            if (String.IsNullOrEmpty(blog.Title))
+            if (!String.IsNullOrEmpty(blog.Content))
             {
                 conditions += " BlogContent = @BlogContent, ";
             }
@@ -130,7 +130,7 @@ namespace HHLDotNetCore.RestApi.Controllers
 
             });
 
-            String Message = result > 1 ? "Update Successful" : "Update Failed";
+            String Message = result > 0 ? "Update Successful" : "Update Failed";
             return Ok(Message);
         }
 
@@ -138,7 +138,15 @@ namespace HHLDotNetCore.RestApi.Controllers
 
         public IActionResult DeleteBlogs(int id)
         {
-            return Ok();
+            using IDbConnection db = new MySqlConnection(_connectionString);
+            string query = "UPDATE Tbl_Blog SET DeleteFlag = 1 WHERE BlogId = @BlogId";
+            int result = db.Execute(query,new BlogsDataModel
+            {
+                BlogId = id
+            });
+
+            String Message = result > 0 ? "Delete Successful" : "Delete Failed";
+            return Ok(Message);
         }
     }
 }
