@@ -20,9 +20,12 @@ Console.WriteLine("Hello, World!");
 // dapperExample.Delete(11);
 
 
-EFCoreExample efCoreExample = new EFCoreExample();
+// EFCoreExample efCoreExample = new EFCoreExample();
 // efCoreExample.Read();
 // efCoreExample.Create("Mingalar pr Taw Tar Myar","Takhin Latt","Taw Tar chay mone yay");
 // efCoreExample.Edit(1);
 // efCoreExample.Update(1,title: "",author:"U Ba",content:"");
-efCoreExample.Delete(10);
+// efCoreExample.Delete(10);
+
+AdoDotNetExample2 adoDotNetExample2 = new AdoDotNetExample2();
+adoDotNetExample2.Edit();

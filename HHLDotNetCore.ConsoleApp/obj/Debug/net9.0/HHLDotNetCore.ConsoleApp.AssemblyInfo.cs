@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HHLDotNetCore.ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f40c45c466458d84ac3b3257872854b917bd185")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a21e5450263d5ddb7e139e7f48d5cde980c3c629")]
 [assembly: System.Reflection.AssemblyProductAttribute("HHLDotNetCore.ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HHLDotNetCore.ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
