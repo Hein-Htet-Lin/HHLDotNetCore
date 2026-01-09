@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "restore": {
+    "/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.MinimalApi/HHLDotNetCore.MinimalApi.csproj": {}
+  },
+  "projects": {
+    "/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.MinimalApi/HHLDotNetCore.MinimalApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.MinimalApi/HHLDotNetCore.MinimalApi.csproj",
+        "projectName": "HHLDotNetCore.MinimalApi",
+        "projectPath": "/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.MinimalApi/HHLDotNetCore.MinimalApi.csproj",
+        "packagesPath": "/home/typhoon/.nuget/packages/",
+        "outputPath": "/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDotNetCore.MinimalApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/typhoon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
