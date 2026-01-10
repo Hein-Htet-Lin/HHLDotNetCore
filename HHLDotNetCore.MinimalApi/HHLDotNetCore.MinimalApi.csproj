@@ -15,4 +15,8 @@
     <PackageReference Include="Dapper" Version="2.1.66" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../HHLDotNetCore.Database/HHLDotNetCore.Database.csproj" />
+  </ItemGroup>
+
 </Project>
