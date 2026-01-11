@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HHLDotNetCore.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07aff28400dc857b8949e4c2bfcbc08244558d6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ad87bb58d24021265e50986c1126496fdf9637b")]
 [assembly: System.Reflection.AssemblyProductAttribute("HHLDotNetCore.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HHLDotNetCore.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

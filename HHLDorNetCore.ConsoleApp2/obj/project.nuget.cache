@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pkhgy2xYBik=",
+  "success": true,
+  "projectFilePath": "/media/typhoon/39f619a1-4965-45c4-9c1e-91503297c509/home/hein/hhl/C#DotNet/HHLDotNetCore/HHLDorNetCore.ConsoleApp2/HHLDorNetCore.ConsoleApp2.csproj",
+  "expectedPackageFiles": [
+    "/home/typhoon/.nuget/packages/newtonsoft.json/13.0.5-beta1/newtonsoft.json.13.0.5-beta1.nupkg.sha512"
+  ],
+  "logs": []
+}
