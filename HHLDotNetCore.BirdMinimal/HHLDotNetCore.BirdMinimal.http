@@ -1,0 +1,6 @@
+@HHLDotNetCore.BirdMinimal_HostAddress = http://localhost:5299
+
+GET {{HHLDotNetCore.BirdMinimal_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

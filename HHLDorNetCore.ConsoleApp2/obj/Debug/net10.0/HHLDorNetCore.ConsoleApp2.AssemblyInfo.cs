@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HHLDorNetCore.ConsoleApp2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ad87bb58d24021265e50986c1126496fdf9637b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b6b81952b26d0bbaf88ffd3c45f3f224ff0b2fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("HHLDorNetCore.ConsoleApp2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HHLDorNetCore.ConsoleApp2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
