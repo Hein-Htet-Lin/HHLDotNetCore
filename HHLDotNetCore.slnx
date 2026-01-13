@@ -6,4 +6,5 @@
   <Project Path="HHLDotNetCore.MinimalApi/HHLDotNetCore.MinimalApi.csproj" />
   <Project Path="HHLDotNetCore.RestApi/HHLDotNetCore.RestApi.csproj" />
   <Project Path="HHLDotNetCore.Shared/HHLDotNetCore.Shared.csproj" />
+  <Project Path="HHLDotNetMInimalApiWithJson/HHLDotNetMInimalApiWithJson.csproj" />
 </Solution>

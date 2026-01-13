@@ -1,0 +1,6 @@
+@HHLDotNetMInimalApiWithJson_HostAddress = http://localhost:5278
+
+GET {{HHLDotNetMInimalApiWithJson_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
